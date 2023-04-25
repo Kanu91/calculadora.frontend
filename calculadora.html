@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-        <!-- CSS DE BOOTSTRAP -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!-- CSS PERSONAL -->
-    <link rel="stylesheet" href="/css/calculadora.css"/>
-    <!-- CSS DE SWEETALERT2 -->
-    <link rel="stylesheet" href="sweetalert2.min.css">
-    
-  </head>
-  <h1>Calculadora</h1>
-  <h4>Autores: Grupo 6 - Año 2023</h4>
-  <p>Claudio Azócar | Sabina Leal | Consuelo Hermosilla </p>
 
-  <body>
-    <div class="calculator">
-      <div class="display">
-        <input type="text" placeholder="0" id="input" disabled />
-      </div>
-      <div class="buttons">
-        <!-- Borrado completo -->
-        <input type="button" value="AC" id="limpiar" />
-        
-        <!-- Borrado ultimo digito -->
-        <input type="button" value="DEL" id="borrar" />
-        
-        <!-- Definimos cada boton como input de tipo boton -->        
-        <input type="button" value="/" class="input-button" />
-        <input type="button" value="*" class="input-button" />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora G6</title>
 
-        <input type="button" value="7" class="input-button" />
-        <input type="button" value="8" class="input-button" />
-        <input type="button" value="9" class="input-button" />
-        <input type="button" value="-" class="input-button" />
+  <!-- ====== CSS ========* -->
+  <!-- CSS DE BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- CSS DE SWEETALERT2 -->
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <!-- CSS PERSONAL -->
+  <link rel="stylesheet" href="/css/calculadora.css" />
 
-        <input type="button" value="6" class="input-button" />
-        <input type="button" value="5" class="input-button" />
-        <input type="button" value="4" class="input-button" />
-        <input type="button" value="+" class="input-button" />
+</head>
 
-        <input type="button" value="1" class="input-button" />
-        <input type="button" value="2" class="input-button" />
-        <input type="button" value="3" class="input-button" />
+<body class="d-flex flex-column min-vh-100">
 
-        <input type="button" value="=" id="igual" />
-        <input type="button" value="0" class="input-button" />
-        <input type="button" value="." class="input-button" />
-      </div>
+  <header>
+    <h1>CALCULADORA</h1>
+  </header>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" placeholder="0" id="input" disabled />
     </div>
-    
-    <!-- SCRIPTS -->
-    <!-- Script bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-        </script>
-    <!-- Script de javascripts -->
-        <script src="/js/calculadora.js"></script>
-    <!-- SCRIPT SWEETALERT2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- SCRIPT JQuery -->
-    <script
-    src="https://code.jquery.com/jquery-3.6.4.js"
-    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    <div class="buttons">   <!-- botones -->
+      <!-- Borrado completo -->
+      <input type="button" value="AC" id="limpiar" />
+
+      <!-- Borrado último dígito-->
+      <input type="button" value="DEL" id="borrar" />
+
+      <!-- Definimos cada botón como input de tipo botón -->
+      <input type="button" value="/" class="input-button" />
+      <input type="button" value="*" class="input-button" />
+
+      <input type="button" value="7" class="input-button" />
+      <input type="button" value="8" class="input-button" />
+      <input type="button" value="9" class="input-button" />
+      <input type="button" value="-" class="input-button" />
+
+      <input type="button" value="6" class="input-button" />
+      <input type="button" value="5" class="input-button" />
+      <input type="button" value="4" class="input-button" />
+      <input type="button" value="+" class="input-button" />
+
+      <input type="button" value="1" class="input-button" />
+      <input type="button" value="2" class="input-button" />
+      <input type="button" value="3" class="input-button" />
+
+      <input type="button" value="=" id="igual" />
+      <input type="button" value="0" class="input-button" />
+      <input type="button" value="." class="input-button" />
+    </div>
+  </div>
+
+  <footer class="mt-auto">  <!--  margin top auto -->
+<hr>
+    <p>Creada por Grupo 6</p>
+    <p>Sabina Leal | Claudio Azócar | Consuelo Hermosilla</p>
+  </footer>
+
+  <!-- ====== SCRIPTS ========* -->
+  <!-- Script bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+  <!-- Script de javascripts -->
+  <script src="/js/calculadora.js"></script>
+  <!-- SCRIPT SWEETALERT2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- SCRIPT JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
     crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
